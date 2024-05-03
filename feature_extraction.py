@@ -177,7 +177,7 @@ def face_feature_data(imagefile, labelfile,length, width):
             
     # Convert the list of images to a matrix
     X = np.array(images)
-    print(X.shape)
+    #print(X.shape)
     with open(labelfile, 'rb') as file:
         lineLab = file.readlines()
     labels = []
@@ -187,7 +187,7 @@ def face_feature_data(imagefile, labelfile,length, width):
         line = "".join(lineSplit)
         labels.append(int(line))
     Y = labels
-    print(len(Y))
+    #print(len(Y))
     return X, Y
         
 #face_feature_data("facedata/facedatatrain", "facedata/facedatatrainlabels", 10, 10)
